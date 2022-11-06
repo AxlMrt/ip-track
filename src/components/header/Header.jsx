@@ -1,29 +1,22 @@
 import React from "react";
 import Geolocation from "../IP-loc/Geolocation";
 
-function Header() {
-  const [ip, setIp] = React.useState({
-    ip: undefined,
-  });
+function Header({ ipValue, updated, handleChange, handleClick }) {
+  
+  const ipRegex = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
 
-  function handleInput(event) {
-    const { value, name } = event.target;
-    setIp((current) => ({
-      ...current,
-      [name]: value,
-    }))
-  }
-  console.log(ip.ip)
   return (
     <header className="App-header">
         <h1>IP Address Tracker</h1>
         <input 
           type="text"
-          name="ip"
-          value={ip.ip}
-          onChange={handleInput}
+          name=""
+          value={ipValue}
+          onChange={handleChange}
+          placeholder="Entrez une adresse IP"
         />
-        <Geolocation location={ip}/>
+        <button onClick={handleClick}>Recherche</button>
+        <Geolocation location={updated}/>
     </header>
   );
 };
