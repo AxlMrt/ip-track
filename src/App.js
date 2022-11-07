@@ -1,9 +1,8 @@
 import React from 'react';
 import Header from './components/header/Header';
-
+import Geolocation from './components/IP-loc/Geolocation';
 function App() {
   const [ipValue, setIpValue] = React.useState('8.8.8.8');
-
   const [updated, setUpdated] = React.useState(ipValue);
 
   function handleClick() {
@@ -22,6 +21,7 @@ function App() {
         handleChange={handleChange}
         handleClick={handleClick}
       />
+      <Geolocation location={updated}/>
     </div>
   );
 }

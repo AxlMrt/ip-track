@@ -1,7 +1,6 @@
 import React from "react";
-import Geolocation from "../IP-loc/Geolocation";
 
-function Header({ ipValue, updated, handleChange, handleClick }) {
+function Header({ ipValue, handleChange, handleClick }) {
   
   const ipRegex = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
 
@@ -16,7 +15,6 @@ function Header({ ipValue, updated, handleChange, handleClick }) {
           placeholder="Entrez une adresse IP"
         />
         <button onClick={handleClick}>Recherche</button>
-        <Geolocation location={updated}/>
     </header>
   );
 };
