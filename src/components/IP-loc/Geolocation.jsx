@@ -1,7 +1,7 @@
 import React from 'react';
 import Map from '../map/Map';
 
-function Geolocation({ location }) {
+function Geolocation({ location, mapRef }) {
   const [ipData, setIpData] = React.useState({});
 
   const center = {
@@ -20,10 +20,9 @@ function Geolocation({ location }) {
     <>
       {
         (ipData.location != null && ipData.location != null) &&
-        <Map center={center}/>
+        <Map center={center} mapRef={mapRef}/>
       }
-    </>
-    
+    </>  
   );
 }
 
