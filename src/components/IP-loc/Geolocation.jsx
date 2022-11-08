@@ -15,7 +15,7 @@ function Geolocation({ location, mapRef }) {
     );
     response.then((data) => data.json()).then((info) => setIpData(info));
   }, [location]);
-
+  console.log(ipData)
   return (
     <>
       {

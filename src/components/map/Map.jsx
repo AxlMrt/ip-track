@@ -5,7 +5,7 @@ import ChangeView from './ChangeView';
 
 function Map({ center }) {
   return (
-    <MapContainer center={center} zoom={13} scrollWheelZoom={true} className="h-80 w-80">
+    <MapContainer center={center} zoom={13} scrollWheelZoom={true} className="h-3/5 w-full">
       <ChangeView center={center} zoom={13}/>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

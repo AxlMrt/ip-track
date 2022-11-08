@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+@layer base {
+  html {
+    font-family: Rubik;
+    font-size: 18px;
+  }
+}
+
+@layer components {
+  .header {
+    background: url(../public/assets/pattern-bg.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .setInput {
+    width: 40%;
+    display: flex;
+    margin-top: 1.7rem;
+  }
+}
