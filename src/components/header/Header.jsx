@@ -1,9 +1,6 @@
 import React from "react";
 
 function Header({ ipValue, handleChange, handleClick }) {
-
-  const ipRegex = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
-
   return (
     <header className="header h-2/5">
       <h1 className="font-medium text-white text-2xl">IP Address Tracker</h1>
