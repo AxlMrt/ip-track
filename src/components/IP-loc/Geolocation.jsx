@@ -26,7 +26,6 @@ function Geolocation({ location }) {
       <div className='infos'>
         <Info ipData={ipData}/>
       </div>
-      
     </>  
   );
 }

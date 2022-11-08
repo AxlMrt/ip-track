@@ -13,7 +13,7 @@ function Header({ ipValue, handleChange, handleClick }) {
           onChange={handleChange}
           placeholder="Search for any IP address"
         />
-        <button onClick={handleClick} className="bg-black p-5 rounded-r-2xl hover:bg-neutral-800"><img src="./assets/icon-arrow.svg"/></button>
+        <button onClick={handleClick} className="bg-black p-5 rounded-r-2xl hover:bg-neutral-800"><img src="./assets/icon-arrow.svg" alt=""/></button>
       </div>
     </header>
   );
